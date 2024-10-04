@@ -1,0 +1,17 @@
+def can_complete_assignments(start_time):
+    end_time = start_time + 3
+    return end_time <= 10
+
+
+T = int(input("Enter number of test cases: "))
+results = []
+
+for _ in range(T):
+    X = int(input("Enter the start time for this test case: "))
+    if can_complete_assignments(X):
+        results.append("Yes")
+    else:
+        results.append("No")
+
+for result in results:
+    print(result)
