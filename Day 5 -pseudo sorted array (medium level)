@@ -1,0 +1,26 @@
+def is_pseudo_sorted(arr, n):
+    
+    inversions = 0
+    
+    for i in range(n - 1):
+        if arr[i] > arr[i + 1]:
+            inversions += 1
+        
+        if inversions > 1:
+            return "NO"
+    
+  
+    return "YES"
+
+
+T = int(input())
+
+
+for _ in range(T):
+    
+    N = int(input())
+    
+    A = list(map(int, input().split()))
+    
+    
+    print(is_pseudo_sorted(A, N))
