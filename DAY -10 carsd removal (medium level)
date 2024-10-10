@@ -1,0 +1,18 @@
+from collections import Counter
+
+
+def min_moves_to_same(cards):
+    card_count = Counter(cards)
+    max_frequency = max(card_count.values())
+    return len(cards) - max_frequency  
+
+
+T = int(input())  
+
+for _ in range(T):
+    N = int(input())  
+    cards = list(map(int, input().split()))  
+    
+    
+    print(min_moves_to_same(cards))
+
