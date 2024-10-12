@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+int main() {
+    int T; 
+    cin >> T;
+
+    while (T--) {
+        int N, K, M; 
+        cin >> N >> K >> M;
+
+  
+        int maxCapacityPerBag = K * M;
+
+        
+        int bagsNeeded = ceil((double)N / maxCapacityPerBag);
+
+        cout << bagsNeeded << endl;
+    }
+
+    return 0;
+}
