@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>  
+using namespace std;
+
+int main() {
+    int T;  
+    cin >> T;
+    while (T--) {
+        int H, X, Y;
+        cin >> H >> X >> Y;
+
+        
+        
+        int remainingHealth = H - Y;
+        int attacksWithSpecial = (remainingHealth > 0) ? (remainingHealth + X - 1) / X + 1 : 1;
+
+        
+        int attacksWithoutSpecial = (H + X - 1) / X;
+
+        
+        int minAttacks = min(attacksWithSpecial, attacksWithoutSpecial);
+
+        cout << minAttacks << endl;
+    }
+    return 0;
+}
