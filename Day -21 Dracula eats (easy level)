@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T; 
+
+    while (T--) {
+        int N;
+        cin >> N; 
+
+      
+        int fullWeeks = N / 7;
+
+        
+        int remainingDays = N % 7;
+        int extraTuesday = (remainingDays >= 2) ? 1 : 0;
+
+        
+        int totalTuesdays = fullWeeks + extraTuesday;
+
+        cout << totalTuesdays << endl;
+    }
+
+    return 0;
+}
