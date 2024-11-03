@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    int player1_cumulative_score = 0, player2_cumulative_score = 0;
+    int max_lead = 0, winner = 0;
+
+    for (int i = 0; i < N; i++) {
+        int S, T;
+        cin >> S >> T;
+
+        
+        player1_cumulative_score += S;
+        player2_cumulative_score += T;
+
+        
+        int lead = abs(player1_cumulative_score - player2_cumulative_score);
+        int current_leader = (player1_cumulative_score > player2_cumulative_score) ? 1 : 2;
+
+        
+        if (lead > max_lead) {
+            max_lead = lead;
+            winner = current_leader;
+        }
+    }
+
+    cout << winner << " " << max_lead << endl;
+    return 0;
+}
