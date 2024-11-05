@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;  
+    
+    while (T--) {
+        int A, B;
+        cin >> A >> B;  
+        
+        int requiredThird = 21 - (A + B);  
+        
+        
+        if (requiredThird >= 1 && requiredThird <= 10) {
+            cout << requiredThird << endl;
+        } else {
+            cout << -1 << endl; 
+        }
+    }
+    
+    return 0;
+}
