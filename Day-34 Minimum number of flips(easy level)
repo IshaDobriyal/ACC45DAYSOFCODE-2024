@@ -1,0 +1,30 @@
+def min_operations_to_zero_sum(arr):
+    total_sum = sum(arr)
+  
+    if total_sum == 0:
+        return 0
+    
+    if abs(total_sum) % 2 != 0:
+        return -1
+    
+    positive_count = arr.count(1)
+    negative_count = len(arr) - positive_count
+    
+    diff = abs(total_sum) // 2
+    
+    if total_sum > 0:
+        return diff if positive_count >= diff else -1
+    else:
+        return diff if negative_count >= diff else -1
+
+
+T = int(input())
+results = []
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    results.append(min_operations_to_zero_sum(A))
+
+
+for result in results:
+    print(result)
