@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int X, Y;
+    cin >> X >> Y;
+
+    
+    int timeForFirstPart = Y / 2;
+
+  
+    int timeForRemainingPart = X - Y;
+
+    
+    int totalTime = timeForFirstPart + timeForRemainingPart;
+
+    cout << totalTime << endl;
+
+    return 0;
+  }
