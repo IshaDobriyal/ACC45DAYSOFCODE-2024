@@ -1,0 +1,25 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T; 
+    while (T--) {
+        int A, B, C;
+        cin >> A >> B >> C;
+        
+    
+        int totalCost = A + B + C;
+        
+        
+        int minCost = min({A, B, C});
+        
+        
+        int priceToPay = totalCost - minCost;
+        
+        
+        cout << priceToPay << endl;
+    }
+    return 0;
+}
